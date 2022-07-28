@@ -47,3 +47,32 @@
   background: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 }
+
+.card{
+  border-color: #ffff !important; 
+}
+
+.div-error{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.div-error span{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.div-error p{
+  text-align: center;
+  font-size: large;
+  font-family: sans-serif;
+}
+
+.img-error{
+  height: 300px;
+  text-align: 'center';
+}
