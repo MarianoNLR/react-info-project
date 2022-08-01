@@ -5,7 +5,6 @@ import Alert from 'react-bootstrap/Alert';
 import NoticeCard from '../NoticeCard';
 import { Row, Pagination, Spin } from 'antd';
 
-
 function NoticesList(props) {
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState([]);
@@ -61,7 +60,7 @@ function NoticesList(props) {
     }
 
     const onChangePage = (pageNumber) => {
-        //scroll.scrollToTop();
+        window.scrollTo(0,0)
         if( page>pageNumber ){
             setOffSet(offSet-10)
         }else{
@@ -101,7 +100,7 @@ function NoticesList(props) {
             data.map((item, index) =>{
                 return(
                     <>
-                        <div>
+                        <div className='div-result'>
                             {<NoticeCard item={item} key={index}></NoticeCard>} 
                         </div>
                     </>

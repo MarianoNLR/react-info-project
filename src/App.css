@@ -48,6 +48,10 @@
   border-radius: 4px;
 }
 
+.container-results{
+  min-height: calc(100vh - 56px - 72px) !important;
+}
+
 .card{
   border-color: #ffff !important; 
 }
@@ -75,4 +79,17 @@
 .img-error{
   height: 300px;
   text-align: 'center';
+}
+
+.footer{
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #282c34;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer h5{
+  color: aliceblue;
 }

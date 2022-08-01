@@ -21,7 +21,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Container>
+        <Container className='container-results'>
           <SearchBar changeValue={this.onSearch}></SearchBar>
           <NoticesList filter={this.state.filter}></NoticesList>
         </Container>
