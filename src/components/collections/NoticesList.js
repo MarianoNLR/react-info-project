@@ -15,7 +15,7 @@ function NoticesList(props) {
     useEffect(()=> {
         if(props.filter.length > 3){
             setLoading(true)
-            axios.get(`https://newsapi.org/v2/everything?q=${props.filter}&apiKey=56f7027115d246a48de39a10097c05c2&page=${page}&pageSize=10&language=es`)
+            axios.get(`https://newsapi.org/v2/everything?q=${props.filter}&apiKey=${process.env.REACT_APP_API_KEY}&page=${page}&pageSize=10&language=es`)
             .then((response) =>{
                 setData(response.data.articles)
                 setTotalResults(response.data.totalResults)
@@ -37,7 +37,8 @@ function NoticesList(props) {
             setPage(1)
             setOffSet(1)
             setLoading(true)
-            axios.get(`https://newsapi.org/v2/everything?q=${props.filter}&apiKey=56f7027115d246a48de39a10097c05c2&page=${page}&pageSize=10&language=es`)
+            console.log(process.env.REACT_APP_API_KEY);
+            axios.get(`https://newsapi.org/v2/everything?q=${props.filter}&apiKey=${process.env.REACT_APP_API_KEY}&page=${page}&pageSize=10&language=es`)
             .then((response) =>{
                 setData(response.data.articles)
                 setTotalResults(response.data.totalResults)
